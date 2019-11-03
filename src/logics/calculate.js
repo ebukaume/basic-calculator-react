@@ -1,22 +1,50 @@
 import operate from "./operate"
 
-const calculate = (total, next, operation, buttonName) => {
-  const computeTotal = (val, next, op, btn) => {
-    if (val === '+/-') return val * -1;
-    if (['%', '/', 'x', '+', '-'].includes(op)) return operate(val, next, op);
+const calculate = ({ total, next, operation }, buttonName) => {
 
-    return val;
-  }
+  const isNumber = string => !!string.match(/\d/);
+
+  const isOperator = string => string.match(/['/','\-','+','x','%']/);
   
-  const data = {
-    total: computeTotal(total, next, operation, buttonName),
-    next,
-    operation
+  if (isNumber(buttonName)) return {next: next + buttonName};
+
+  if (isOperator(buttonName)) {
+    if(operation) {
+      let result = operate(total, next, operation);
+
+      return {
+        total: buttonName === '%' ? operate(result, null, buttonName) : result,
+        operation: buttonName === '%' ? null : buttonName
+      }
+    }
+    return {operation: buttonName};
   }
 
-  return data;
+  switch (buttonName) {
+    case 'AC':
+      return {
+        total:  '0',
+        next: '0',
+        operation: null
+      };
+    case '+/-':
+      return {
+        total: !parseFloat(next) ? (-1 * total).toString() : total,
+        next: !!parseFloat(next) ? (-1 * next).toString() : next,
+      };
+    case '.':
+      return {
+        next: next.match(/\./) ? next : next + buttonName
+      }
+    case '=':
+      return {
+        total: operation ? operate(total, next, operation) : total,
+        next: '0',
+        operation: null
+      }
+    default:
+      return {};
+  }
 }
-
-// console.log(calculate('12', '4', 'x'))
 
 export default calculate;

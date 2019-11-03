@@ -38,6 +38,10 @@
   height: 100%;
 }
 
+#display-panel :hover {
+  cursor: pointer;
+}
+
 #display-panel div {
   height: 100px;
 }

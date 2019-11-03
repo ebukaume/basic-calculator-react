@@ -13,6 +13,7 @@ export default function ButtonPanel() {
   
   const getColor = value => {
     if (['/', 'x', '+', '-', '='].includes(value)) return;
+    
     return MAGIC_GRAY;
   }
 
