@@ -1,0 +1,31 @@
+#app {
+  width: 700px;
+}
+
+#display {
+  align-items: center;
+  background-color: gray;
+  color: white;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 100px;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+#display-panel {
+  display: flex;
+  flex-direction: column;
+
+  div{
+    height: 100px;
+  }
+
+  button {
+    border: 1px solid gray;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 100%;
+  }
+}
