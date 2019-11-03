@@ -4,7 +4,7 @@ import Button from './Button';
 export default function ButtonPanel() {
   const MAGIC_GRAY = 'rgb(235, 229, 229)';
   const names = [
-    ['A/C', '+/-', '%', '/'],
+    ['AC', '+/-', '%', '/'],
     ['7', '8', '9', 'x'],
     ['4', '5', '6', '-'],
     ['1', '2', '3', '+'],
