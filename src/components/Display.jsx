@@ -1,5 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
-export default function Display({ value }) {
-  return <div>{value}</div>;
+const Display = ({ value }) => <div>{value}</div>;
+
+Display.defaultProps = {
+  value: '10'
 }
+
+Display.propTypes = {
+  value: PropTypes.string
+}
+
+export default Display;

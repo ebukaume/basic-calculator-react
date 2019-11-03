@@ -11,7 +11,7 @@ export default function ButtonPanel() {
   ];
   
   return (
-    <React.Fragment>
+    <div>
       {names.map((grp, i) => {
         return (
           <div key={"group-" + i} id={"group-" + (i + 1)}>
@@ -19,6 +19,6 @@ export default function ButtonPanel() {
           </div>
         )
       })}
-    </React.Fragment>
+    </div>
   );
 }
