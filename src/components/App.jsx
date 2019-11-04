@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../styles/App.css';
+// eslint-disable-next-line no-unused-vars
 import calculate from '../logics/calculate';
 
 export default class App extends Component {
