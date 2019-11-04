@@ -24,6 +24,9 @@ const calculate = ({ total, next, operation }, buttonName) => {
       return {
         next: next.match(/\./) ? next : next + buttonName
       }
+    case '%':
+      if (next === '0') return {total: operate(total, null, buttonName)}
+      return { next: operate(next, null, buttonName) };
     case '=':
       return {
         total: operation ? operate(total, next, operation) : total,
@@ -35,14 +38,17 @@ const calculate = ({ total, next, operation }, buttonName) => {
 
   if (isOperator(buttonName)) {
     if(operation) {
-      let result = operate(total, next, operation);
-
       return {
-        total: buttonName === '%' ? operate(result, null, buttonName) : result,
-        operation: buttonName === '%' ? null : buttonName
+        next: '0',
+        total: operate(total, next, operation),
+        operation: buttonName 
       }
     }
-    return {operation: buttonName};
+    return {
+      next: '0',
+      total: next,
+      operation: buttonName
+    };
   }
   
 }
