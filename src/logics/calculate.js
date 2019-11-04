@@ -2,23 +2,11 @@ import operate from "./operate"
 
 const calculate = ({ total, next, operation }, buttonName) => {
 
-  const isNumber = string => !!string.match(/\d/);
+  const isNumber = str => !!str.match(/\d/);
 
-  const isOperator = string => string.match(/['/','\-','+','x','%']/);
+  const isOperator = str => str.match(/['/','\-','+','x','%']/);
   
   if (isNumber(buttonName)) return {next: next + buttonName};
-
-  if (isOperator(buttonName)) {
-    if(operation) {
-      let result = operate(total, next, operation);
-
-      return {
-        total: buttonName === '%' ? operate(result, null, buttonName) : result,
-        operation: buttonName === '%' ? null : buttonName
-      }
-    }
-    return {operation: buttonName};
-  }
 
   switch (buttonName) {
     case 'AC':
@@ -43,8 +31,20 @@ const calculate = ({ total, next, operation }, buttonName) => {
         operation: null
       }
     default:
-      return {};
   }
+
+  if (isOperator(buttonName)) {
+    if(operation) {
+      let result = operate(total, next, operation);
+
+      return {
+        total: buttonName === '%' ? operate(result, null, buttonName) : result,
+        operation: buttonName === '%' ? null : buttonName
+      }
+    }
+    return {operation: buttonName};
+  }
+  
 }
 
 export default calculate;
