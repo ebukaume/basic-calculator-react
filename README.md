@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Magic Calculator 👋</h1>
+<h1 align="center">Welcome to Maths Magic Calculator 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ebukaume/todo-list#readme" target="_blank">
