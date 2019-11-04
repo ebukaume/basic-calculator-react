@@ -19,32 +19,33 @@
 
 This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
 
-Weather Man is a weather app built with vanilla JavaScript. It consumes APIs from two different sources (weather and geolocation) and dynamically re-renders part of the DOM. On page load, the app tries to guess the visitor's city from their IP address. It then goes out and fetches weather information for that city.
+In this project, I am building a basic calculator for a fictious company, Maths Magic. I am using React. 
 
-The full project requirements can be found [here](https://www.theodinproject.com/courses/javascript/lessons/weather-app).
+I will share more when I complete the project. Stay tuned...
+
+The full project requirements can be found [here](https://github.com/microverseinc/project-react-calculator).
 
 ## Built With
 
+- React
 - JavaScript (ES6)
-- HMTL
 - SCSS
 - npm
-- webpack
 
-### ✨ [Live Demo](https://raw.githack.com/ebukaume/weather-man/master/dist/index.html)
+### ✨ [Live Demo](https://basic-calculator-react.herokuapp.com/)
 
 ## Usage
 
 > Clone the repository to your local machine
 
 ```sh
-$ git clone https://github.com/ebukaume/weather-man.git
+$ git clone https://github.com/ebukaume/basic-calculator-react.git
 ```
 
 > cd into the directory, install dependencies, build and start
 
 ```sh
-$ cd weather-man
+$ cd basic-calculator-react
 $ npm install
 $ npm run build
 $ npm run start
@@ -61,9 +62,9 @@ $ npm run start
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ebukaume/weather-man/issues).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ebukaume/basic-calculator-react/issues).
 
-1. Fork it (https://github.com/ebukaume/weather-man/fork)
+1. Fork it (https://github.com/ebukaume/basic-calculator-react/fork)
 2. Create your working branch (git checkout -b [choose-a-name])
 3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
 4. Push to the branch (git push origin [chosen-name])
@@ -75,4 +76,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/ebukaume/weather-man/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/ebukaume/basic-calculator-react/blob/master/LICENSE) licensed.
