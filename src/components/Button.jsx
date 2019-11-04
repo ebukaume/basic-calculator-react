@@ -1,18 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Button({ name, color, wide }) {
-  const DEFAULT_COLOR = 'orange'
-  const NORMAL = '25%'
-  const WIDE = '50%'
+const Button = ({ name, color, wide }) => {
+  const NORMAL = '25%';
+  const WIDE = '50%';
   
   const styles = {
     width: wide ? WIDE : NORMAL,
-    backgroundColor: color ? color : DEFAULT_COLOR
+    backgroundColor: color
   }
 
   return (
-    <button style={ styles }>
+    <button
+      style={ styles }
+    >
       {name}
     </button>
   );
 }
+
+Button.defaultProps = {
+  color: 'orange'
+};
+
+Button.propTypes = {
+  value: PropTypes.string
+};
+
+export default Button;
