@@ -1,68 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Welcome to Maths Magic Calculator 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/ebukaume/todo-list#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/ebukaume/todo-list/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/ebukaume/todo-list/blob/master/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/ebukaume/todo-list" />
+  </a>
+  <a href="https://twitter.com/ebukaume" target="_blank">
+    <img alt="Twitter: ebukaume" src="https://img.shields.io/twitter/follow/ebukaume.svg?style=social" />
+  </a>
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
 
-### `npm start`
+In this project, I am building a basic calculator for a fictious company, Maths Magic. I am using React. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I will share more when I complete the project. Stay tuned...
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The full project requirements can be found [here](https://github.com/microverseinc/project-react-calculator).
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- JavaScript (ES6)
+- SCSS
+- npm
 
-### `npm run build`
+### ✨ [Live Demo](https://basic-calculator-react.herokuapp.com/)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+> Clone the repository to your local machine
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+$ git clone https://github.com/ebukaume/basic-calculator-react.git
+```
 
-### `npm run eject`
+> cd into the directory, install dependencies, build and start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+$ cd basic-calculator-react
+$ npm install
+$ npm run build
+$ npm run start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Open `http://127.0.0.1:8080` using your favourite broswer, if it doesn't open automatically.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Author
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+👤 **Ebuka Umeokonkwo**
 
-## Learn More
+- Github: [@ebukaume](https://github.com/ebukaume)
+- Twitter: [@ebukaume](https://twitter.com/ebukaume)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/ebukaume/basic-calculator-react/issues).
 
-### Code Splitting
+1. Fork it (https://github.com/ebukaume/basic-calculator-react/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Show your support
 
-### Analyzing the Bundle Size
+Give a ⭐️ if you like this project!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## 📝 License
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is [MIT](https://github.com/ebukaume/basic-calculator-react/blob/master/LICENSE) licensed.
