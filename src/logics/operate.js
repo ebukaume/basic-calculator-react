@@ -13,7 +13,7 @@ const operate = ((numberOne, numberTwo, operation) => {
     case '%':
       return Big(numberOne).div(100).toString();
     default:
-      return numberOne.toString();
+      return (numberOne || numberTwo).toString();
   }
 });
 

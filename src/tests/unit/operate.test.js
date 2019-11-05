@@ -25,13 +25,13 @@ describe('#addition', () =>{
   it('calculates the sum of 2 FLOATS', () => {
     const sum = operate('12.53', 4.42, '+');
 
-    expect(parseFloat(sum)).toBeCloseTo(16.95, 0.0001);
+    expect(parseFloat(sum)).toBeCloseTo(16.95, 0.00001);
   });
 
   it('calculates the sum of 1 FLOAT and 1 INTEGER', () => {
     const sum = operate(134, '41.42', '+');
 
-    expect(parseFloat(sum)).toBeCloseTo(175.42, 0.00001);
+    expect(parseFloat(sum)).toBeCloseTo(175.42, 0.000001);
   });
 });
 
@@ -45,13 +45,13 @@ describe('#subtraction', () =>{
   it('calculates the difference of 2 FLOATS', () => {
     const difference = operate(4.42, 12.53, '-');
 
-    expect(parseFloat(difference)).toBeCloseTo(-8.11, 0.0001);
+    expect(parseFloat(difference)).toBeCloseTo(-8.11, 0.00001);
   });
 
   it('calculates the difference of 1 FLOAT and 1 INTEGER', () => {
     const difference = operate('134.553', 41, '-');
 
-    expect(parseFloat(difference)).toBeCloseTo(93.553, 0.00001);
+    expect(parseFloat(difference)).toBeCloseTo(93.553, 0.000001);
   });
 });
 
@@ -65,7 +65,7 @@ describe('#multiplication', () =>{
   it('calculates the product of 2 FLOATS', () => {
     const product = operate(4.42, 7.357, 'x');
 
-    expect(parseFloat(product)).toBeCloseTo(32.51794, 0.00001);
+    expect(parseFloat(product)).toBeCloseTo(32.51794, 0.000001);
   });
 
   it('calculates the product of 1 FLOAT and 1 INTEGER', () => {
@@ -85,13 +85,13 @@ describe('#division', () =>{
   it('calculates the quotient of 2 FLOATS', () => {
     const quotient = operate(7.42, 124.205, '/');
 
-    expect(parseFloat(quotient)).toBeCloseTo(0.059739946, 0.000000001);
+    expect(parseFloat(quotient)).toBeCloseTo(0.059739946, 0.0000000001);
   });
 
   it('calculates the quotient of 1 FLOAT and 1 INTEGER', () => {
     const quotient = operate('553', 41.142, '/');
 
-    expect(parseFloat(quotient)).toBeCloseTo(13.441252248, 0.0000001);
+    expect(parseFloat(quotient)).toBeCloseTo(13.441252248, 0.00000001);
   });
 });
 
