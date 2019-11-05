@@ -1,0 +1,48 @@
+#app {
+  margin: auto;
+  width: 700px;
+}
+
+#display {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gray;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 100px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+}
+
+#display-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#display-panel button {
+  border: 1px solid gray;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 100%;
+}
+
+#display-panel :hover {
+  cursor: pointer;
+}
+
+#display-panel div {
+  height: 100px;
+}
+/*# sourceMappingURL=App.css.map */

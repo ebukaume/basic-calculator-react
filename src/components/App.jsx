@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel.jsx';
-import '../App.css';
+import '../styles/App.css';
 
 export default class App extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div id="container">
+      <div id="app">
         <Display value={this.state.result} />
         <ButtonPanel />
       </div>
