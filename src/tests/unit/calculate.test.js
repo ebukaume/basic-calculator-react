@@ -6,8 +6,8 @@ describe('when a number is pressed', () => {
   it('appends the current number to next property of the state', () => {
     const buttonName = number(9);
     const state = {
-      total: number(1000),
-      next: number(1000),
+      total: number(10000),
+      next: number(10000),
       operation: null
     }
 
@@ -21,7 +21,7 @@ describe('when +/- key is pressed', () => {
   it('multiplies total by -1 if next is zero', () => {
     const buttonName = '+/-';
     const state = {
-      total: number(1000),
+      total: number(10000),
       next: '0',
       operation: null
     }
@@ -38,7 +38,7 @@ describe('when +/- key is pressed', () => {
   it('multiplies next by -1 if next is not zero', () => {
     const buttonName = '+/-';
     const state = {
-      total: number(1000),
+      total: number(10000),
       next: number(12112),
       operation: null
     }
@@ -57,8 +57,8 @@ describe('when AC is pressed', () => {
   it('resets the state when AC is pressed', () =>{
     const buttonName = 'AC';
     const state = {
-      total: number(1000),
-      next: number(1000),
+      total: number(10000),
+      next: number(10000),
       operation: ['/','-','+','x','%', null][number(5)]
     }
 
@@ -77,8 +77,8 @@ describe('when "." is pressed', () => {
   it('appends . to next unless already added', () =>{
     const buttonName = '.';
     const state = {
-      total: number(1000),
-      next: number(1000),
+      total: number(10000),
+      next: number(10000),
       operation: ['/','-','+','x','%', null][number(5)]
     }
 
@@ -90,8 +90,8 @@ describe('when "." is pressed', () => {
   it('does not append . to next if already added', () =>{
     const buttonName = '.';
     const state = {
-      total: number(1000),
-      next: (number(1000) * (Math.random() + 1)).toString(),
+      total: number(10000),
+      next: (number(10000) * (Math.random() + 1)).toString(),
       operation: ['/','-','+','x','%', null][number(5)]
     }
 
@@ -105,8 +105,8 @@ describe('when "=" is pressed', () => {
   it('returns the result of the operation between total & next for next > 0', () =>{
     const buttonName = '=';
     const state = {
-      total: number(1000),
-      next: number(1000),
+      total: number(10000),
+      next: number(10000),
       operation: '+'
     }
 

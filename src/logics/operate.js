@@ -7,13 +7,15 @@ const operate = ((numberOne, numberTwo, operation) => {
     case '-':
       return Big(numberOne).minus(numberTwo).toString();
     case '/':
-      return Big(numberOne).div(numberTwo).toString();
+      return numberTwo.toString() === '0' ? 
+        'INIFINITY' : 
+        Big(numberOne).div(numberTwo).toString();
     case 'x':
       return Big(numberOne).times(numberTwo).toString();
     case '%':
       return Big(numberOne).div(100).toString();
     default:
-      return numberOne.toString();
+      return (numberOne || numberTwo).toString();
   }
 });
 
