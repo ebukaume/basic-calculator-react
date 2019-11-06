@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Maths Magic Calculator 👋</h1>
+<h1 align="center">Welcome to Maths Magic's Basic Calculator 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/ebukaume/todo-list#readme" target="_blank">
@@ -19,9 +19,7 @@
 
 This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
 
-In this project, I am building a basic calculator for a fictious company, Maths Magic. I am using React. 
-
-I will share more when I complete the project. Stay tuned...
+In this project, I worked on a project for a fictional company that requires my help building a **Basic Calculator** using react. The project has been split into multiple milestones, and each milestone has functional and technical requirements I must meet. 
 
 The full project requirements can be found [here](https://github.com/microverseinc/project-react-calculator).
 
@@ -29,8 +27,10 @@ The full project requirements can be found [here](https://github.com/microversei
 
 - React
 - JavaScript (ES6)
-- SCSS
+- Node.js
 - npm
+- React-Create-App
+- SCSS
 
 ### ✨ [Live Demo](https://basic-calculator-react.herokuapp.com/)
 
@@ -51,7 +51,11 @@ $ npm run build
 $ npm run start
 ```
 
-> Open `http://127.0.0.1:8080` using your favourite broswer, if it doesn't open automatically.
+> Open `http://127.0.0.1:3000` using your favourite broswer, if it doesn't open automatically.
+
+## Test
+
+After cloning the repo, navigate to the project directory `cd basic-calculator-react` and then run the test command `npm test`.
 
 ## Author
 
