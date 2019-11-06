@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, color, wide }) => {
+const Button = ({ name, color, wide, clickHandler }) => {
   const NORMAL = '25%';
   const WIDE = '50%';
   
@@ -13,6 +13,7 @@ const Button = ({ name, color, wide }) => {
   return (
     <button
       style={ styles }
+      onClick={() => clickHandler(name)}
     >
       {name}
     </button>

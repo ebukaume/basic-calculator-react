@@ -6,13 +6,17 @@ const calculate = ({ total, next, operation }, buttonName) => {
 
   const isOperator = str => str.match(/['/','\-','+','x','%']/);
   
-  if (isNumber(buttonName)) return {next: next + buttonName};
-
+  if (isNumber(buttonName)) {
+    return {
+      next: next + buttonName,
+      isOperation: false
+    };
+  }
   switch (buttonName) {
     case 'AC':
       return {
         total:  '0',
-        next: '0',
+        next: '',
         operation: null
       };
     case '+/-':
@@ -22,15 +26,16 @@ const calculate = ({ total, next, operation }, buttonName) => {
       };
     case '.':
       return {
-        next: next.match(/\./) ? next : next + buttonName
+        next: next.match(/\./) ? next : next + buttonName,
+        isOperation: false
       }
     case '%':
-      if (next === '0') return {total: operate(total, null, buttonName)}
+      if (next === '') return {total: operate(total, null, buttonName)}
       return { next: operate(next, null, buttonName) };
     case '=':
       return {
         total: operation ? operate(total, next, operation) : total,
-        next: '0',
+        next: '',
         operation: null
       }
     default:
@@ -39,13 +44,13 @@ const calculate = ({ total, next, operation }, buttonName) => {
   if (isOperator(buttonName)) {
     if(operation) {
       return {
-        next: '0',
+        next: '',
         total: operate(total, next, operation),
         operation: buttonName 
       }
     }
     return {
-      next: '0',
+      next: '',
       total: next,
       operation: buttonName
     };
