@@ -93,6 +93,12 @@ describe('#division', () =>{
 
     expect(parseFloat(quotient)).toBeCloseTo(13.441252248, 0.00000001);
   });
+
+  it('returns INFINITY when 0 is passed as the denominator', () => {
+    const quotient = operate('553', 0, '/');
+
+    expect(quotient).toBe('INIFINITY');
+  });
 });
 
 describe('#percentage', () =>{
