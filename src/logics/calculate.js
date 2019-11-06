@@ -1,6 +1,7 @@
 import operate from "./operate"
 
 const calculate = ({ total, next, operation }, buttonName) => {
+  if (total === 'INIFINITY') total = '0';
   const isNumber = str => !!str.match(/\d/);
 
   const isOperator = str => str.match(/['/','\-','+','x','%']/);
