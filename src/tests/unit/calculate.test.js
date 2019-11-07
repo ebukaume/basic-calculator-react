@@ -115,7 +115,7 @@ describe('when "=" is pressed', () => {
     const newState = calculate(state, buttonName);
     const expectedState = {
       total: (parseFloat(state.total) + parseFloat(state.next)).toString(),
-      next: '',
+      next: (parseFloat(state.total) + parseFloat(state.next)).toString(),
       operation: null,
     };
 
@@ -133,7 +133,7 @@ describe('when "=" is pressed', () => {
     const newState = calculate(state, buttonName);
     const expectedState = {
       total: '0',
-      next: '',
+      next: '0',
       operation: null,
     };
 

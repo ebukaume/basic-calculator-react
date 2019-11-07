@@ -33,9 +33,10 @@ const calculate = ({ total, next, operation }, buttonName) => {
       if (next === '') return {total: operate(total, null, buttonName)}
       return { next: operate(next, null, buttonName) };
     case '=':
+      const result = operation ? operate(total, next, operation) : total
       return {
-        total: operation ? operate(total, next, operation) : total,
-        next: '',
+        total: result,
+        next: result,
         operation: null
       }
     default:
