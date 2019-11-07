@@ -13,11 +13,9 @@ export default class App extends Component {
       total: '0',
       next: ''
     };
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick (buttonName) {
+  handleClick = buttonName => {
     const newState = calculate(this.state, buttonName);
     this.setState({...{isOperation: true}, ...newState});
   }
