@@ -116,7 +116,7 @@ describe('when "=" is pressed', () => {
     const expectedState = {
       total: (parseFloat(state.total) + parseFloat(state.next)).toString(),
       next: (parseFloat(state.total) + parseFloat(state.next)).toString(),
-      operation: null,
+      operation: buttonName,
     };
 
     expect(newState).toEqual(expectedState);
@@ -134,7 +134,7 @@ describe('when "=" is pressed', () => {
     const expectedState = {
       total: '0',
       next: '0',
-      operation: null,
+      operation: buttonName,
     };
 
     expect(newState).toEqual(expectedState);

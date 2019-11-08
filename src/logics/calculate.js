@@ -7,6 +7,15 @@ const calculate = ({ total, next, operation }, buttonName) => {
   const isOperator = str => str.match(/['/','\-','+','x','%']/);
   
   if (isNumber(buttonName)) {
+    if (operation === '=') {
+      console.log({next, total, operation})
+      return {
+        next: buttonName,
+        total: '0',
+        operation: null,
+        isOperation: false
+      }
+    }
     return {
       next: next + buttonName,
       isOperation: false
@@ -37,7 +46,7 @@ const calculate = ({ total, next, operation }, buttonName) => {
       return {
         total: result,
         next: result,
-        operation: null
+        operation: '='
       }
     default:
   }
