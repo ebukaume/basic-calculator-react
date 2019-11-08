@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-export default function ButtonPanel() {
+const ButtonPanel = ({clickHandler}) => {
   const MAGIC_GRAY = 'rgb(235, 229, 229)';
   const names = [
     ['AC', '+/-', '%', '/'],
@@ -12,10 +12,10 @@ export default function ButtonPanel() {
   ];
   
   const getColor = value => {
-    if (['/', 'x', '+', '-', '='].includes(value)) return;
-    
-    return MAGIC_GRAY;
+    if (!['/', 'x', '+', '-', '='].includes(value)) return MAGIC_GRAY;
   }
+
+  const handleClick = buttonName => clickHandler(buttonName); 
 
   return (
     <div id='display-panel'>
@@ -32,6 +32,7 @@ export default function ButtonPanel() {
                     name={cell}
                     wide={cell === '0'}
                     color={getColor(cell)}
+                    clickHandler={handleClick}
                     />
                 );
               })}
@@ -41,3 +42,5 @@ export default function ButtonPanel() {
     </div>
   );
 }
+
+export default ButtonPanel;

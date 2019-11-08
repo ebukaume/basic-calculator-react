@@ -13,7 +13,9 @@ describe('when a number is pressed', () => {
 
     const newState = calculate(state, buttonName);
     
-    expect(newState).toEqual({ next: state.next + buttonName })
+    expect(newState).toEqual({
+      next: state.next + buttonName,
+      isOperation: false })
   });
 });
 
@@ -22,7 +24,7 @@ describe('when +/- key is pressed', () => {
     const buttonName = '+/-';
     const state = {
       total: number(10000),
-      next: '0',
+      next: '',
       operation: null
     }
 
@@ -65,7 +67,7 @@ describe('when AC is pressed', () => {
     const newState = calculate(state, buttonName);
     const expectedState = {
       total: '0',
-      next: '0',
+      next: '',
       operation: null
     }
 
@@ -84,7 +86,7 @@ describe('when "." is pressed', () => {
 
     const newState = calculate(state, buttonName);
 
-    expect(newState).toEqual({ next: state.next + '.' })
+    expect(newState).toEqual({ next: state.next + '.', isOperation: false })
   });
 
   it('does not append . to next if already added', () =>{
@@ -97,7 +99,7 @@ describe('when "." is pressed', () => {
 
     const newState = calculate(state, buttonName);
 
-    expect(newState).toEqual({ next: state.next})
+    expect(newState).toEqual({ next: state.next, isOperation: false})
   });
 });
 
@@ -113,8 +115,8 @@ describe('when "=" is pressed', () => {
     const newState = calculate(state, buttonName);
     const expectedState = {
       total: (parseFloat(state.total) + parseFloat(state.next)).toString(),
-      next: '0',
-      operation: null,
+      next: (parseFloat(state.total) + parseFloat(state.next)).toString(),
+      operation: buttonName,
     };
 
     expect(newState).toEqual(expectedState);
@@ -124,15 +126,15 @@ describe('when "=" is pressed', () => {
     const buttonName = '=';
     const state = {
       total: number(1000),
-      next: '0',
+      next: '',
       operation: 'x'
     }
 
     const newState = calculate(state, buttonName);
     const expectedState = {
-      total: (parseFloat(state.total) * parseFloat(state.next)).toString(),
+      total: '0',
       next: '0',
-      operation: null,
+      operation: buttonName,
     };
 
     expect(newState).toEqual(expectedState);
@@ -151,7 +153,7 @@ describe('when any of [+, -, /, x] is pressed', () => {
     const newState = calculate(state, buttonName);
     const expectedState = {
       total: (parseFloat(state.total) + parseFloat(state.next)).toString(),
-      next: '0',
+      next: '',
       operation: buttonName,
     };
 
@@ -169,7 +171,7 @@ describe('when any of [+, -, /, x] is pressed', () => {
     const newState = calculate(state, buttonName);
     const expectedState = {
       total: state.next,
-      next: '0',
+      next: '',
       operation: buttonName,
     };
 

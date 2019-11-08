@@ -2,22 +2,32 @@ import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../styles/App.css';
-// eslint-disable-next-line no-unused-vars
 import calculate from '../logics/calculate';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: '0'
+      isOperation: true,
+      result: '0',
+      total: '0',
+      next: ''
     };
   }
 
+  handleClick = buttonName => {
+    const newState = calculate(this.state, buttonName);
+    this.setState({...{isOperation: true}, ...newState});
+  }
+
   render() {
+    const {isOperation, total, next} = this.state;
     return (
       <div id="app">
-        <Display value={this.state.result} />
-        <ButtonPanel />
+        <Display
+          value={isOperation ? total : next}
+          />
+        <ButtonPanel clickHandler={this.handleClick}/>
       </div>
     );
   }
