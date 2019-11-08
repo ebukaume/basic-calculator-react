@@ -8,7 +8,6 @@ const calculate = ({ total, next, operation }, buttonName) => {
   
   if (isNumber(buttonName)) {
     if (operation === '=') {
-      console.log({next, total, operation})
       return {
         next: buttonName,
         total: '0',
