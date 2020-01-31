@@ -17,6 +17,14 @@
 
 <br>
 
+<p>
+  <a href="https://bookstore-react-redux.herokuapp.com" target="_blank">
+    <img alt="Website" src="./docs/calculator.png" />
+  </a>
+</p>
+
+<br>
+
 This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
 
 In this project, I worked on a project for a fictional company that requires my help building a **Basic Calculator** using react. The project has been split into multiple milestones, and each milestone has functional and technical requirements I must meet. 
@@ -81,3 +89,8 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](https://github.com/ebukaume/basic-calculator-react/blob/master/LICENSE) licensed.
+
+## Contact me
+
+I am looking for my next opportunity. Reach out to me if you are looking to hire!
+_ebukaume@gmail.com_
