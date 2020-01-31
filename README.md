@@ -18,7 +18,7 @@
 <br>
 
 <p>
-  <a href="https://bookstore-react-redux.herokuapp.com" target="_blank">
+  <a href="https://basic-calculator-react.herokuapp.com/" target="_blank">
     <img alt="Website" src="./docs/calculator.png" />
   </a>
 </p>
